@@ -1,5 +1,16 @@
 <div class ="container">
   <div class = "card">
+    <form [formGroup]="checkoutForm" (ngSubmit)="onSubmit()">
+
+      <div>
+        <label for="cin">
+          Cin
+        </label>
+        <input id="cin" type="text" formControlName="cin">
+      </div>
+      <button class="button" type="submit">search</button>
+    </form>
+
     <h3 class="text-center"> Users List</h3>
     <div class = "card-body">
       <table class="table table-striped">
@@ -19,5 +30,5 @@
         </tbody>
       </table>
     </div>
-  </div>
+    </div>
 </div>
