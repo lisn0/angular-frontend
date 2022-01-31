@@ -1,0 +1,10 @@
+{
+  "/api": {
+    "target": "http://microservices.info/api/v1/finance",
+    "secure": false,
+    "changeOrigin": true,
+    "pathRewrite": {
+      "^/api": ""
+    }
+  }
+}
