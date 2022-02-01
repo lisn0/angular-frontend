@@ -1,6 +1,7 @@
 import {Component, OnInit} from '@angular/core';
 import {UserService} from '../user.service'
 import {User} from '../user';
+import {InteriorUser} from '../interior-user';
 import {FormBuilder} from "@angular/forms";
 
 @Component({
@@ -11,6 +12,7 @@ import {FormBuilder} from "@angular/forms";
 export class UserComponent implements OnInit {
 
   user!: User;
+  interiorUser!: InteriorUser;
   constructor(
     private userService: UserService,
     private formBuilder: FormBuilder,
@@ -29,9 +31,14 @@ export class UserComponent implements OnInit {
       console.log(data);
       this.user = data;
     });
+    // @ts-ignore
+    this.userService.getInteriorUsers(value).subscribe((data: InteriorUser) => {
+      console.log(data);
+      this.interiorUser = data;
+    });
 
     console.warn('Your order has been submitted', this.checkoutForm.value);
-    this.checkoutForm.reset();
+    // this.checkoutForm.reset();
   }
   ngOnInit(): void {
     // this.userService.getUsers().subscribe((data: User) => {

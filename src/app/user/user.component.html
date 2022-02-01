@@ -15,17 +15,23 @@
     <div class = "card-body">
       <table class="table table-striped">
         <thead>
-        <th>Id</th>
+        <th> cin </th>
         <th> First Name</th>
         <th> Last Name</th>
-        <th> Email </th>
+        <th> type finance </th>
+        <th> description </th>
+        <th> rechercher? </th>
+        <th> type de rechercher </th>
         </thead>
         <tbody>
         <tr>
           <td> {{ user.cin }}</td>
-          <td> {{ user.name }}</td>
+          <td> {{ interiorUser.firstName }}</td>
+          <td> {{ interiorUser.lastName }}</td>
           <td> {{ user.type }}</td>
           <td> {{ user.description }}</td>
+          <td> {{ interiorUser.rechercher }}</td>
+          <td> {{ interiorUser.type }}</td>
         </tr>
         </tbody>
       </table>

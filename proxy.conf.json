@@ -1,6 +1,6 @@
 {
   "/api": {
-    "target": "http://microservices.info/api/v1/finance",
+    "target": "https://b199c1c52ede48eb94fb.eastus2.aksapp.io/api/v1/",
     "secure": false,
     "changeOrigin": true,
     "pathRewrite": {
