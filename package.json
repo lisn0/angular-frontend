@@ -5,6 +5,7 @@
     "ng": "ng",
     "start": "ng serve --proxy-config proxy.conf.json",
     "build": "ng build",
+    "install": "npm install",
     "watch": "ng build --watch --configuration development",
     "test": "ng test"
   },
@@ -21,6 +22,8 @@
     "@angular/router": "~13.2.0",
     "rxjs": "~7.5.0",
     "tslib": "^2.3.0",
+    "opentracing": "^0.14.7",
+    "lightstep-tracer": "^0.32.0-no-protobuf",
     "zone.js": "~0.11.4"
   },
   "devDependencies": {
