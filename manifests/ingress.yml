@@ -14,8 +14,7 @@ spec:
           - path: /api/v1/finance
             pathType: Prefix
             backend:
-              service:
-                name: angular
+                serviceName: angular
                 port:
                   number: 80
     - host: b199c1c52ede48eb94fb.eastus2.aksapp.io
@@ -24,15 +23,13 @@ spec:
           - path: /api/v1/finance
             pathType: Prefix
             backend:
-              service:
-                name: finance
+                serviceName: finance
                 port:
                   number: 9001
           - path: /api/v1/interior
             pathType: Prefix
             backend:
-              service:
-                name: interior
+                serviceName: interior
                 port:
                   number: 8080
           - path: /
