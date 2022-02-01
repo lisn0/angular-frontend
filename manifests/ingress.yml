@@ -11,12 +11,11 @@ spec:
     - host: old.b199c1c52ede48eb94fb.eastus2.aksapp.io
       http:
         paths:
-          - path: /api/v1/finance
+          - path: /
             pathType: Prefix
             backend:
                 serviceName: angular
-                port:
-                  number: 80
+                servicePort: 80
     - host: b199c1c52ede48eb94fb.eastus2.aksapp.io
       http:
         paths:
@@ -24,14 +23,12 @@ spec:
             pathType: Prefix
             backend:
                 serviceName: finance
-                port:
-                  number: 9001
+                servicePort: 9001
           - path: /api/v1/interior
             pathType: Prefix
             backend:
                 serviceName: interior
-                port:
-                  number: 8080
+                servicePort: 8080
           - path: /
             backend:
               serviceName: "micro-156d"
