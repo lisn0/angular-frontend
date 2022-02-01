@@ -1,0 +1,19 @@
+apiVersion : apps/v1
+kind: Deployment
+metadata:
+  name: "micro-156d"
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: "micro-156d"
+  template:
+    metadata:
+      labels:
+        app: "micro-156d"
+    spec:
+      containers:
+        - name: "micro-156d"
+          image: "containerregistry46.azurecr.io/micro"
+          ports:
+          - containerPort: 80
