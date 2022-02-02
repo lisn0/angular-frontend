@@ -1,17 +1,38 @@
 apiVersion: extensions/v1beta1
 kind: Ingress
 metadata:
-    name: "micro-b770"
-    labels:
-        app: "micro-b770"
-    annotations:
-        kubernetes.io/ingress.class: addon-http-application-routing
+  name: "angular"
+  labels:
+    app: "angular"
+  annotations:
+    kubernetes.io/ingress.class: addon-http-application-routing
 spec:
-    rules:
-        - host: angular-micro-b770.90f5dc09bf09425d8175.eastus2.aksapp.io
-          http:
-            paths:
-            - path: /
-              backend:
-                serviceName: "micro-b770"
-                servicePort: 80
+  rules:
+#    - host: old.90f5dc09bf09425d8175.eastus2.aksapp.io
+#      http:
+#        paths:
+#          - path: /
+#            pathType: Prefix
+#            backend:
+#              serviceName: angular
+#              servicePort: 80
+    - host: 90f5dc09bf09425d8175.eastus2.aksapp.io
+      http:
+        paths:
+          - path: /api/v1/finance
+            pathType: Prefix
+            backend:
+              serviceName: finance
+              servicePort: 9001
+          - path: /api/v1/interior
+            pathType: Prefix
+            backend:
+              serviceName: interior
+              servicePort: 8080
+          - path: /
+            backend:
+              serviceName: "angular"
+              servicePort: 80
+
+
+#90f5dc09bf09425d8175.eastus2.aksapp.io
