@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
         - name: angular
-          image: lisno/fronted:v3
+          image: lisno/fronted:v5
           imagePullPolicy: Always
           ports:
             - containerPort: 80
