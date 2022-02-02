@@ -8,14 +8,6 @@ metadata:
     kubernetes.io/ingress.class: addon-http-application-routing
 spec:
   rules:
-#    - host: old.90f5dc09bf09425d8175.eastus2.aksapp.io
-#      http:
-#        paths:
-#          - path: /
-#            pathType: Prefix
-#            backend:
-#              serviceName: angular
-#              servicePort: 80
     - host: 90f5dc09bf09425d8175.eastus2.aksapp.io
       http:
         paths:
@@ -33,6 +25,3 @@ spec:
             backend:
               serviceName: "angular"
               servicePort: 80
-
-
-#90f5dc09bf09425d8175.eastus2.aksapp.io
