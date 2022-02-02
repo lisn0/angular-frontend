@@ -1,9 +1,9 @@
 apiVersion: extensions/v1beta1
 kind: Ingress
 metadata:
-  name: "angular"
+  name: "micro-b770"
   labels:
-    app: "angular"
+    app: "micro-b770"
   annotations:
     kubernetes.io/ingress.class: addon-http-application-routing
 spec:
@@ -31,7 +31,7 @@ spec:
               servicePort: 8080
           - path: /
             backend:
-              serviceName: "angular"
+              serviceName: "micro-b770"
               servicePort: 80
 
 
