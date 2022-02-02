@@ -11,5 +11,5 @@ spec:
       port: 80
       protocol: TCP
   selector:
-    app : angular
+    app : angular2
 
